@@ -1,0 +1,107 @@
+body{
+    background-color: #242424;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-menu{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    background-color: #00ffb6;
+}
+
+.main-menu li{
+    margin:0 20px;
+}
+
+.main-menu a{
+    font-size: 28px;
+    color: #242424;
+    font-weight: 700;
+}
+
+#description-container{
+    margin: 65px 0;
+}
+
+#description-container .dev-image-description{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dev-image-description img{
+    max-width: 100%;
+    width: 15%;
+    margin-bottom: 20px;
+    border: 5px solid #00ffb6;
+    border-radius: 100%;
+}
+
+.dev-image-description .short-description{
+    text-align: center;
+}
+
+.short-description .dev-name{
+    margin-bottom: 20px;
+}
+
+.short-description h1, .short-description h3, .short-description p{
+    color: #fff;
+}
+
+.short-description h3{
+    font-style: italic;
+}
+
+.short-description .dev-description{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.short-description p{
+    padding-bottom: 20px;
+    font-size:18px;
+    border-bottom: 1px solid #00ffb6;
+}
+
+#skills-banners .title-container{
+    display: flex;
+    justify-content: center;
+}
+
+#skills-banners h1.banner-title{
+    width: 15%;
+    margin-bottom: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    border-left: 4px solid #00ffb6;
+    border-right: 4px solid #00ffb6;
+}
+
+.banner-item img{
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5%;
+    background-color: #fff;
+}
+
+@media only screen and (min-width:768px) {
+    #skills-banners{
+        width: 945pt;
+        margin: 0 auto;
+    }
+}
