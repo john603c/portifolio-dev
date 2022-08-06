@@ -14,21 +14,83 @@ a{
     text-decoration: none;
 }
 
-.main-menu{
-    display: flex;
-    justify-content: center;
-    padding: 25px;
+#header{
+    position: fixed;
+    top: 0;
+    width: 15%;
     background-color: #00ffb6;
+    transition: all .4s ease;
+    z-index: 999;
 }
 
-.main-menu li{
-    margin:0 20px;
+#header.open{
+    left: 0;
+}
+
+#header.closed{
+    left: -100%;
+}
+
+#header #menu{
+    height: 100vh;
+}
+
+#header #menu .main-menu{
+    height: 100%;
+    padding: 25px;
 }
 
 .main-menu a{
     font-size: 28px;
     color: #242424;
     font-weight: 700;
+}
+
+.close-menu{
+    padding: 20px;
+    text-align: right;
+}
+
+.close-menu i{
+    font-size: 30px;
+    color: #242424;
+    cursor: pointer;
+}
+
+#menu-icon{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    width: 35px;
+    height: 35px;
+    background-color: #00ffb6;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 0px 20px -8px #00ffb6;
+}
+
+#menu-icon i{
+    font-size: 25px;
+    color: #242424;
+}
+
+#main{
+    position: relative;
+    width: 100%;
+    float: right;
+}
+
+#main-mask.active{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 1;
 }
 
 #description-container{
@@ -43,7 +105,7 @@ a{
 
 .dev-image-description img{
     max-width: 100%;
-    width: 15%;
+    width: 30%;
     margin-bottom: 20px;
     border: 5px solid #00ffb6;
     border-radius: 100%;
@@ -76,19 +138,46 @@ a{
     border-bottom: 1px solid #00ffb6;
 }
 
-#skills-banners .title-container{
+#skills-container{
+    margin-bottom: 15%;
+}
+
+.title-container{
     display: flex;
     justify-content: center;
 }
 
-#skills-banners h1.banner-title{
-    width: 15%;
+#skills-container h1.banner-title, #exp-container h1.exp-title{
+    width: auto;
     margin-bottom: 45px;
+    padding: 0 20px;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
-    border-left: 4px solid #00ffb6;
-    border-right: 4px solid #00ffb6;
+}
+
+#skills-container h1.banner-title>span, #exp-container h1>span{
+    display: flex;
+    align-items: center;
+    font-size: 55px;
+}
+
+#skills-container h1>span:before, #skills-container h1>span:after,
+#exp-container h1>span:before, #exp-container h1>span:after{
+    padding: 15px;
+    font-size: 25px;
+}
+
+#skills-container h1>span:before, #skills-container h1>span:after{
+    content: "\f44b";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+#exp-container h1>span:before, #exp-container h1>span:after{
+    content: "\f0b1";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
 }
 
 .banner-item img{
@@ -99,8 +188,51 @@ a{
     background-color: #fff;
 }
 
+.view-all{
+    display: block;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+#exp-container .exp-list{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+    text-align: center;
+}
+
+.exp-list li{
+    padding: 50px;
+    background-color: #fff;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 35px 0;
+    transition: all .5s ease;
+}
+
+.exp-list li:hover{
+    transform: scale(0.95);
+}
+
+.backTop {
+    position: fixed;
+    display: flex;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 4px;
+    color: #242424;
+    background: #00ffb6;
+    cursor: pointer;
+    z-index: 1;
+}
+
 @media only screen and (min-width:768px) {
-    #skills-banners{
+    .main-container{
         width: 945pt;
         margin: 0 auto;
     }

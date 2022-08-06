@@ -7,89 +7,107 @@
     <link rel="stylesheet" href="../skin/css/slick.css">
     <link rel="stylesheet" href="../skin/css/slick-theme.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../skin/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../skin/css/style.css">
     <title>Portifólio</title>
 </head>
 <body>
     <header id="header">
-        <nav>
+        <nav id="menu">
+            <div class="close-menu"><i class="fa-solid fa-arrow-left"></i></div>
             <ul class="main-menu">
                 <li><a href="javascript:void(0)"><span>Sobre Mim</span></a></li>
                 <li><a href="javascript:void(0)"><span>Projetos</span></a></li>
                 <li><a href="javascript:void(0)"><span>Skills</span></a></li>
             </ul>
         </nav>
-        <div id="description-container">
-            <div class="dev-image-description">
-                <img src="../skin/img/dev-photo.jpg">
-                <div class="short-description">
-                    <div class="dev-name">
-                        <h1>João Pedro Rodrigues de Castro</h1>
-                        <h3>Desenvolvedor Frontend</h3>
-                    </div>
-                    <div class="dev-description">
-                        <p>"Atuo na área de tecnologia da informação como desenvolvedor de aplicativos para a web. Desde 2017 trabalhando no mercado digital, participei do desenvolvimento de diversos projetos de e-commerce produzindo layouts responsivos e performáticos."</p>
+    </header>
+    <main id="main">
+        <div id="main-mask"></div>
+        <div class="main-container">
+            <div id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+            <div id="description-container">
+                <div class="dev-image-description">
+                    <img src="../skin/img/dev-photo.jpg">
+                    <div class="short-description">
+                        <div class="dev-name">
+                            <h1>João Pedro Rodrigues de Castro</h1>
+                            <h3>Desenvolvedor Frontend</h3>
+                        </div>
+                        <div class="dev-description">
+                            <p>"Atuo na área de tecnologia da informação como desenvolvedor de aplicativos para a web. Desde 2017 trabalhando no mercado digital, participei do desenvolvimento de diversos projetos de e-commerce produzindo layouts responsivos e performáticos."</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="skills-banners">
-            <div class="title-container">
-                <h1 class="banner-title">Skills</h1>
+            <div id="skills-container">
+                <div class="title-container">
+                    <h1 class="banner-title"><span>Skills</span><a class="view-all" href="../src/skill.html">Ver todos</a></h1>
+                </div>
+                <ul class="banner-list">
+                    <li class="banner-item">
+                        <img src="../skin/img/html-logo.png">
+                    </li>
+                    <li class="banner-item">
+                        <img src="../skin/img/css-logo.png">
+                    </li>
+                    <li class="banner-item">
+                        <img src="../skin/img/less-logo.png">
+                    </li>
+                    <li class="banner-item">
+                        <img src="../skin/img/bootstrap-logo.png">
+                    </li>
+                    <li class="banner-item">
+                        <img src="../skin/img/js-logo.png">
+                    </li>
+                    <li class="banner-item">
+                        <img src="../skin/img/jquery-logo.png">
+                    </li>
+                    <li class="banner-item">
+                        <img src="../skin/img/magento-logo.png">
+                    </li>
+                    <li class="banner-item">
+                        <img src="../skin/img/git-logo.png">
+                    </li>
+                </ul>
             </div>
-            <ul class="banner-list">
-                <li class="banner-item">
-                    <img src="../skin/img/html-logo.png">
-                </li>
-                <li class="banner-item">
-                    <img src="../skin/img/css-logo.png">
-                </li>
-                <li class="banner-item">
-                    <img src="../skin/img/less-logo.png">
-                </li>
-                <li class="banner-item">
-                    <img src="../skin/img/bootstrap-logo.png">
-                </li>
-                <li class="banner-item">
-                    <img src="../skin/img/js-logo.png">
-                </li>
-                <li class="banner-item">
-                    <img src="../skin/img/jquery-logo.png">
-                </li>
-                <li class="banner-item">
-                    <img src="../skin/img/magento-logo.png">
-                </li>
-                <li class="banner-item">
-                    <img src="../skin/img/git-logo.png">
-                </li>
-            </ul>
-        </div>
-    </header>
-    <main id="main">
-        <div class="main-container">
-
+            <div id="exp-container">
+                <div class="title-container">
+                    <h1 class="exp-title"><span>Experiências</span><a class="view-all" href="../src/skill.html">Saiba mais</a></h1>
+                </div>
+                <ul class="exp-list">
+                    <li class="exp-item">
+                        <img src="../skin/img/benner-logo.png">
+                    </li>
+                    <li class="exp-item">
+                        <img src="../skin/img/signa-logo.png">
+                    </li>
+                </ul>
+            </div>
+            <footer id="footer">
+                <div class="footer-container">
+                    <div class="social-container">
+                        <ul class="social-list">
+                            <li><a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-rodrigues-de-castro-9b0096149/"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/bigjohncastro/"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/joaopedro.rodriguesdecastro/"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/BigJohnCastro"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="https://www.twitch.tv/bigjohncastro"><i class="fa-brands fa-twitch"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-container">
+                        <ul class="contact-list">
+                            <li>Endereço</li>
+                            <li>Email</li>
+                            <li>Telefone/Celular</li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="backTop" style="display: flex;"><i class="fas fa-chevron-up"></i></span>
+            </footer>
         </div>
     </main>
-    <footer id="footer">
-        <div class="footer-container">
-            <div class="social-container">
-                <ul class="social-list">
-                    <li>Linkedin</li>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>twitter</li>
-                    <li>Twitch</li>
-                </ul>
-            </div>
-            <div class="contact-container">
-                <ul class="contact-list">
-                    <li>Endereço</li>
-                    <li>Email</li>
-                    <li>Telefone/Celular</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
     <script src="../skin/js/jquery-3.6.0.min.js"></script>
     <script src="../skin/js/slick.min.js"></script>
     <script src="../skin/js/main.js"></script>
