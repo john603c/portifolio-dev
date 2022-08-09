@@ -20,10 +20,24 @@ $(document).ready(function(){
         dots: false,
         autoplay: true,
         autoplaySpeed: 5000,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2
+              }
+            }
+        ]
     });
 
-    $("#exp-container .exp-list li").hover(function(){
-        $(this).toggleClass("animate__animated animate__rubberBand")
+    $("#social-container .social-list li").hover(function(){
+        $(this).toggleClass("animate__animated animate__bounce")
     });
 
     $(window).scroll(function() {

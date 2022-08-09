@@ -81,7 +81,6 @@ a{
 #main{
     position: relative;
     width: 100%;
-    float: right;
 }
 
 #main-mask.active{
@@ -94,7 +93,7 @@ a{
 }
 
 #description-container{
-    margin: 65px 0;
+    padding: 65px 0;
 }
 
 #description-container .dev-image-description{
@@ -107,7 +106,7 @@ a{
     max-width: 100%;
     width: 30%;
     margin-bottom: 20px;
-    border: 5px solid #00ffb6;
+    border: 6px solid #00ffb6;
     border-radius: 100%;
 }
 
@@ -138,44 +137,37 @@ a{
     border-bottom: 1px solid #00ffb6;
 }
 
-#skills-container{
-    margin-bottom: 15%;
-}
-
 .title-container{
     display: flex;
     justify-content: center;
 }
 
-#skills-container h1.banner-title, #exp-container h1.exp-title{
+.title{
     width: auto;
     margin-bottom: 45px;
     padding: 0 20px;
     text-align: center;
     text-transform: uppercase;
-    color: #fff;
+    color: #00ffb6;
 }
 
-#skills-container h1.banner-title>span, #exp-container h1>span{
+.title>span{
     display: flex;
     align-items: center;
     font-size: 55px;
 }
 
-#skills-container h1>span:before, #skills-container h1>span:after,
-#exp-container h1>span:before, #exp-container h1>span:after{
+.title>span:before, .title>span:after{
     padding: 15px;
     font-size: 25px;
 }
 
-#skills-container h1>span:before, #skills-container h1>span:after{
-    content: "\f44b";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+#skills-container, #exp-container, #social-container, #contact-container{
+    margin-bottom: 15%;
 }
 
-#exp-container h1>span:before, #exp-container h1>span:after{
-    content: "\f0b1";
+#skills-title>span:before, #skills-title>span:after{
+    content: "\f44b";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
 }
@@ -206,7 +198,7 @@ a{
     background-color: #fff;
     width: 75%;
     margin: 0 auto;
-    border-radius: 35px 0;
+    border-radius: 10px;
     transition: all .5s ease;
 }
 
@@ -214,10 +206,120 @@ a{
     transform: scale(0.95);
 }
 
+#exp-title>span:before, #exp-title>span:after{
+    content: "\f0b1";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+#social-title>span:before, #social-title>span:after{
+    content: "\40";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.social-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+.social-list li{
+    flex-basis: 50%;
+    padding: 0 15px;
+    margin-bottom: 50px;
+}
+
+.social-list li a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    font-size: 25px;
+    color: #fff;
+    border: 6px solid #00ffb6;
+    border-radius: 10px;
+    transition: 500ms;
+}
+
+.social-list li a:hover{
+    color: #242424;
+    background-color: #fff;
+}
+
+.social-list i{
+    font-size: 35px;
+}
+
+.fa-linkedin{
+    color: #0077B5;
+}
+
+.fa-instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-facebook{
+    color: #4267B2;
+}
+
+.fa-twitter{
+    color: #00acee ;
+}
+
+.fa-twitch{
+    color: #6441a5;
+}
+
+.contact-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+.contact-list li{
+    flex-basis: 50%;
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-list li .item-content{
+    padding: 25px;
+    border: 6px solid #00ffb6;
+    border-radius: 10px;
+}
+
+.contact-list li .email:before{
+    content: "\f0e0";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+.contact-list li .phone:before{
+    content: "\f095";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+#copyright{
+    padding: 5px;
+    text-align: center;
+    font-weight: 800;
+    background-color: #00ffb6;
+}
+
 .backTop {
     position: fixed;
     display: flex;
-    bottom: 30px;
+    bottom: 50px;
     right: 30px;
     width: 55px;
     height: 55px;
@@ -235,5 +337,52 @@ a{
     .main-container{
         width: 945pt;
         margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width:992px){
+    .title>span{
+        font-size: 30px;
+    }
+    
+    .exp-item img{
+        width: 100%;
+    }
+
+    .social-list li, .contact-list li{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width:425px){
+    .dev-name h1{
+        padding: 0 15px;
+        font-size: 26px;
+    }
+
+    .dev-image-description img{
+        width: 50%;
+    }
+
+    .short-description .dev-description{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .short-description .dev-description p{
+        font-size: 14px;
+    }
+
+    .exp-list li{
+        display: flex;
+        align-items: center;
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .contact-list li{
+        font-size: 15px;
     }
 }
